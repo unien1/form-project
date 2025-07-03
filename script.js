@@ -6,23 +6,20 @@ function validateEmail(email) {
   return /\S+@\S+\.\S+/.test(email);
 }
 
-document.getElementById('user-form').addEventListener('submit', function(e) {
+document.getElementById('user-form').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const age = parseInt(document.getElementById('age').value);
-  const hobby = document.getElementById('hobby').value;
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const ageValue = document.getElementById('age').value.trim();
+  const hobby = document.getElementById('hobby').value.trim();
   const message = document.getElementById('message');
 
   message.textContent = '';
 
-  if (
-    !validateField('Name', name) ||
-    !validateField('Email', email) ||
-    !validateField('Age', age) ||
-    !validateField('Hobby', hobby)
-  ) {
+  const age = parseInt(ageValue, 10);
+
+  if (!validateField('Name', name) || !validateField('Email', email) || !validateField('Age', ageValue) || !validateField('Hobby', hobby)) {
     message.textContent = 'All fields are required.';
     return;
   }
