@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>User Form</title>
+</head>
+<body>
+  <section class="form-container">
+    <form id="user-form">
+      <div class="form-group">
+        <label for="name" class="input-label">Full Name</label>
+        <input type="text" id="name" class="form-input" />
+      </div>
+      <div class="form-group">
+        <label for="email" class="input-label">Email Address</label>
+        <input type="email" id="email" class="form-input" />
+      </div>
+      <div class="form-group">
+        <label for="age" class="input-label">Age</label>
+        <input type="number" id="age" class="form-input" />
+      </div>
+      <div class="form-group">
+        <label for="hobby" class="input-label">Hobby</label>
+        <input type="text" id="hobby" class="form-input" />
+      </div>
+      <button type="submit">Submit</button>
+      <p id="message" class="message"></p>
+    </form>
+  </section>
+
+  <section id="people-section">
+    <div id="people-list" class="grid-list"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
